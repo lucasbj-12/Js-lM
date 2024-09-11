@@ -1,6 +1,6 @@
-let nombre = prompt ("Ingrese su nombre:");
-let apellido = prompt ("Ingrese su apellido:");
-console.log ("Hola " + nombre + " " + apellido + "!");
+let nombres = prompt ("Ingrese su nombre:");
+let apellidos = prompt ("Ingrese su apellido:");
+console.log ("Hola " + nombres + " " + apellidos + "!");
 
 let nacimiento = parseInt(prompt("Ingrese su año de nacimiento"));
 let anio_actual = 2024;
@@ -26,7 +26,7 @@ for (let i = 1; i < 5; i++){
     console.log("Cantidad de dias de entrenamiento: " +i);
 };
 
-////////! Opearodes Avanzados //////////////
+////////! Funciones //////////////
 
 function preguntarEjercicios(){
 let ejercicios = prompt ("Que parte de su cuerpo le gustaria entrenar?")
@@ -37,4 +37,32 @@ preguntarEjercicios();
 preguntarEjercicios();
 preguntarEjercicios();
 
-////////! Funciones //////////////
+////////! Objetos //////////////
+
+let cliente ={
+nombre: "Alan",
+Apellido: "Garcia",
+Nacionalidad: "Argentino",
+Experiencia: "Primera vez que entrena.",
+}
+console.log(cliente.nombre);
+console.log(cliente.Experiencia);
+
+function Rutinas(alimentacion, entrenamiento, seguimiento){
+    this.alimentacion = alimentacion;
+    this.entrenamiento = entrenamiento;
+    this.seguimiento = seguimiento;
+}
+const rutinas2 = new Rutinas("Se envio por mail", "Entregado al alumno", "Esperando resultados del alumno");
+const rutinas3 = new Rutinas("Aun no realizada", "En realizacion", "Seguimiento activo");
+
+console.log(rutinas2);
+console.log(rutinas3);
+
+////////! Arrays //////////////
+
+let objetivos = ["Reduccion de peso", "Tonificar", "Ganar masa muscular", "Ser mas saludable", "Cambiar habitos"];
+
+for (let i = 0; i < 5; i++){
+    console.log(objetivos[i]);
+}
