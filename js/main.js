@@ -53,8 +53,8 @@ function Rutinas(alimentacion, entrenamiento, seguimiento){
     this.entrenamiento = entrenamiento;
     this.seguimiento = seguimiento;
 }
-const rutinas2 = new Rutinas("Se envio por mail", "Entregado al alumno", "Esperando resultados del alumno");
-const rutinas3 = new Rutinas("Aun no realizada", "En realizacion", "Seguimiento activo");
+let rutinas2 = new Rutinas("Se envio por mail", "Entregado al alumno", "Esperando resultados del alumno");
+let rutinas3 = new Rutinas("Aun no realizada", "En realizacion", "Seguimiento activo");
 
 console.log(rutinas2);
 console.log(rutinas3);
@@ -65,4 +65,41 @@ let objetivos = ["Reduccion de peso", "Tonificar", "Ganar masa muscular", "Ser m
 
 for (let i = 0; i < 5; i++){
     console.log(objetivos[i]);
+};
+
+////////! Funciones de orden superior //////////////
+
+const insumos =["Proteinas", "Creatinas", "Indumentaria", "Maquinarias"];
+
+insumos.forEach((insumo) => {
+console.log(insumo);
+});
+
+const carrito =[{
+    titulo: "Proteinas",
+    precio:17500,
+    cantidad: 2
+},
+{
+    titulo: "Creatina",
+    precio: 32000,
+    cantidad: 3
+},
+{
+    titulo: "Indumentaria",
+    precio: 25000,
+    cantidad: 2
+},
+{
+    titulo: "Maquinaria",
+    precio: 125000,
+    cantidad: 2
 }
+];
+
+const total = carrito.reduce((acc, prod)=> acc + prod.precio + prod.cantidad, 0);
+console.log(total);
+
+const hoy = new Date();
+const comienzo = new Date(2024, 11, 18, 16 );
+console.log(comienzo);
